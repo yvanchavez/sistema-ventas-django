@@ -1,0 +1,49 @@
+{% extends 'base/base.html' %} {% block page_content %}
+
+<div class="col-xl-8 col-md-12 mb-4 m-auto">
+
+  <div class="card border-left-danger shadow h-100 py-2">
+  
+    <div class="card-body">
+      <h4 class="card-title text-center">¿ ELIMINAR {{obj.descripcion}} ?</h4>
+      <div class="row no-gutters align-items-center">
+        <div class="col-12">
+          <form method="POST">
+              {% csrf_token %}
+          
+            <div class="row">
+              <div class="col-lg-6 col-md-12 mt-2">
+                <button
+                type="submit"
+                name=""
+                id=""
+                class="btn btn-primary btn-lg btn-block"
+              >
+                Si, Eliminar
+              </button>
+              </div>
+
+              <div class="col-lg-6 col-md-12 mt-2">
+                <a
+
+                href="{% url 'inv:categoria_list' %}"
+                name=""
+                id=""
+                class="btn btn-danger btn-lg btn-block"
+              >
+                Cancelar
+              </a>
+              </div>
+            </div>
+
+           
+
+            
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %} {% block js_page %} {% endblock js_page %}
